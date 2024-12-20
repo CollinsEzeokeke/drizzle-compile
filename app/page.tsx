@@ -1,3 +1,11 @@
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+  SignUpButton,
+  SignOutButton,
+} from "@clerk/nextjs";
 import Image from "next/image";
 
 export default function Home() {
@@ -95,6 +103,20 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
+
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <SignUpButton />
+        </SignedOut>
+        <SignedIn>
+          <SignOutButton />
+        </SignedIn>
+
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
       </footer>
     </div>
   );
